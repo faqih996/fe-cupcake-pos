@@ -8,6 +8,7 @@ import "./assets/main.css";
 
 import App from "./App.vue";
 import router from "./router";
+import { option } from "@primeuix/themes/aura/autocomplete";
 
 const app = createApp(App);
 
@@ -53,6 +54,9 @@ const FlashPreset = definePreset(Aura, {
 app.use(PrimeVue, {
   theme: {
     preset: FlashPreset,
+    options: {
+      darkModeSelector: ".app-dark",
+    },
   },
 });
 
